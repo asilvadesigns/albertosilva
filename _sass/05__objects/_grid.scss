@@ -1,0 +1,42 @@
+//
+//  Var
+$grid__x:  $global__x;
+$grid__y:  $global__y;
+//
+//  Base
+.container {
+    margin: 0 auto;
+    padding: 0 $grid__x;
+    max-width: 32em;
+
+    @media (min-width: 50em) {
+        max-width: 60em;
+    }
+}
+
+.row {
+    @include clearfix;
+}
+
+.col--1 {
+    width: 10em;
+}
+
+@media (min-width: 50em) {
+    .col {
+        float: left;
+    }
+
+    .col--1 {
+        width: percentage(1 / 6);
+    }
+
+    .col--2 {
+        width: percentage(2 / 6);
+    }
+
+    .col--4 {
+        width: percentage(3 / 6);
+        padding-right: percentage(1 / 6);
+    }
+}

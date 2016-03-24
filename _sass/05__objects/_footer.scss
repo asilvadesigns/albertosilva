@@ -1,0 +1,11 @@
+//
+//  Var
+$footer__y:  rhythm($global__y);
+$footer__x:  $global__x;
+//
+//  Base
+.footer {
+    margin-top: ($footer__y * 4);
+    margin-bottom: ($footer__y * 8);
+}
+

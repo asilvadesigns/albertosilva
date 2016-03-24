@@ -1,0 +1,18 @@
+<!--http://stackoverflow.com/questions/8340170/jekyll-automatically-highlight-current-tab-in-menu-bar-->
+{% for node in pagelist %}
+{% if navgroup == null or navgroup == node.navgroup %}
+{% if page.url == node.url %}
+<a class="nav__item active" href="{{ node.url | prepend: site.baseurl }}">
+    <span class="nav__icon"><i class="icon {{ node.icon }}"></i></span>
+    <strong class="nav__text">{{ node.title }}</strong>
+</a>
+{% else %}
+<a class="nav__item" href="{{ node.url | prepend: site.baseurl }}">
+    <span class="nav__icon"><i class="icon {{ node.icon }}"></i></span>
+    <strong class="nav__text">{{ node.title }}</strong>
+</a>
+{% endif %}
+{% endif %}
+{% endfor %}
+{% assign pagelist = nil %}
+{% assign navgroup = nil %}

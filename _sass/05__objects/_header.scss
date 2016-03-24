@@ -1,0 +1,10 @@
+//
+//  Var
+$header__y:  rhythm($global__y);
+$header__x:  $global__x;
+//
+//  Base
+.header {
+    margin-top: ($header__y * 4);
+    margin-bottom: ($header__y * 8);
+}

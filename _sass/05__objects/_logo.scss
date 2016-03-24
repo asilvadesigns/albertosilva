@@ -1,0 +1,26 @@
+.logo {
+    position: relative;
+
+    display: inline-block;
+
+    padding-top: 0;
+    padding-bottom: 0;
+
+    &:hover .logo__svg {
+        cursor: pointer;
+    }
+
+    &:after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        content: "";
+    }
+}
+
+.logo__svg {
+    height: rhythm(1);
+}

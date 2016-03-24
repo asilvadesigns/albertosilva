@@ -1,0 +1,27 @@
+---
+layout:     page
+title:      blog
+icon:       icon-spread
+navgroup:   "main"
+navorder:   3
+---
+
+<h5 class="heading heading--subtitle">interweb ponderings</h5>
+
+<div class="row">
+    <div class="col col--4">
+
+        {% for post in site.posts %}
+        <div class="content post">
+            <header class="content__header post__header">
+                <h3 class="post__title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+                <time class="post__time" datetime="{{ post.date | date: '%F' }} {{ post.date | date: '%R' }}">{{ post.date | date: "%a, %b %d, %y"}}</time>
+            </header>
+            <section class="content__body post__body">
+                <p>{{ post.excerpt | truncate: 115 }}</p>
+            </section>
+        </div>
+        {% endfor %}
+
+    </div>
+</div>

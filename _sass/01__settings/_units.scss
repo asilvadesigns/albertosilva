@@ -1,0 +1,28 @@
+//
+//  Base Unit
+$global__unit:      1em;
+//
+//  Global Units
+$global__contrast:  10%;
+$global__gutter:    ($global__unit * 0.5);
+$global__radius:    ($global__unit * 0.25);
+$global__x:         ($global__unit * 0.75);
+$global__y:         ($global__unit * 0.5);
+//
+//  Typography
+$global__font-ratio:   1.414;
+$global__font-size:    18;
+$global__line-height:  1.5;
+//
+//  Pixel Units
+$one__pixel: 1px;
+//
+//  Rhythm
+//  1.067      Minor Second
+//  1.125      Major Second
+//  1.200      Minor Third
+//  1.250      Major Third
+//  1.333      Perfect Fourth
+//  1.414      Augmented Fourth
+//  1.500      Perfect Fifth
+//  1.618      Golden Ratio

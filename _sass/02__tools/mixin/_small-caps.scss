@@ -1,0 +1,7 @@
+///
+/// Small Caps
+/// @group Typography
+@mixin small-caps {
+    font-feature-settings: 'kern' 1, 'liga' 1, 'smcp' 1;
+    letter-spacing: 0.1em;
+}

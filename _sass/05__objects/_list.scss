@@ -1,0 +1,21 @@
+.list--inline {
+    > li {
+        display: inline-block;
+    }
+
+    //  If there are more than one in a list
+    > li + li:before {
+        content: ",";
+    }
+
+    //  If there are two in a list
+    > li:first-child + li:last-child:before {
+        content: "& ";
+    }
+
+    //  If there are more than two in a list
+    > li:not(:first-child) + li:last-child:before {
+        content: "& ";
+    }
+}
+

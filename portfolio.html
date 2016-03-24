@@ -1,0 +1,55 @@
+---
+layout:     page
+title:      portfolio
+icon:       icon-case-2
+navgroup:   "main"
+navorder:   4
+---
+{% capture project_path %}{{ site.baseurl }}{{ site.projectimagepath }}{% endcapture %}
+{% assign projects = site.portfolio | sort: listing-priority %}
+
+{% for project in projects %}
+<div class="row">
+    <div class="col col--4">
+        <ul>
+            {% for image in project.images %}
+            <li>
+                <img src="{{ project_path }}{{ image.image }}" alt="{{ page.title }}">
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="col col--2">
+        <div class="sidebar">
+            <header class="sidebar__header">
+                <h4 style="text-transform: capitalize">{{ project.title }}</h4>
+            </header>
+            <section class="sidebar__body">
+                <h5>Brief</h5>
+                <p>{{ project.summary }}</p>
+                <h5>Client</h5>
+                <p>{{ project.client }}</p>
+                <h5>Products</h5>
+                <ul class="list--inline">
+                    {% for product in project.products %}
+                    <li>{{ product.product | capitalize }}</li>
+                    {% endfor %}
+                </ul>
+                <h5>Roles</h5>
+                <ul class="list--inline">
+                    {% for role in project.roles %}
+                    <li>{{ role.role | capitalize }}</li>
+                    {% endfor %}
+                </ul>
+                <h5>Tools</h5>
+                <ul class="list--inline">
+                    {% for tool in project.tools %}
+                    <li>{{ tool.tool | capitalize }}</li>
+                    {% endfor %}
+                </ul>
+            </section>
+        </div>
+    </div>
+</div>
+
+{% endfor %}

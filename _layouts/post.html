@@ -1,0 +1,32 @@
+---
+layout: default
+---
+<h5 class="heading heading--subtitle">listed under: {% for tag in page.tags %}{{ tag.tag }}{% endfor %}</h5>
+
+<div class="row">
+    <div class="col col--4">
+        <div class="content post">
+            <header class="content__header post__header">
+                <h3 class="post__title">{{ page.title }}</h3>
+                <time class="post__time" datetime="{{ page.date | date: '%F' }} {{ page.date | date: '%R' }}">{{ page.date | date: "%a, %b %d, %y"}}</time>
+            </header>
+            <section class="content__body post__body">
+                {{ content }}
+            </section>
+            <footer class="content__footer">
+                &mdash;Thanks for Reading!
+            </footer>
+        </div>
+    </div>
+    <div class="col col--2">
+        <div class="sidebar">
+            <header class="sidebar__header">
+                <h4>tl;dr</h4>
+            </header>
+            <section class="sidebar__body">
+                <h5>The Point:</h5>
+                <p>{{ page.summary }}</p>
+            </section>
+        </div>
+    </div>
+</div>

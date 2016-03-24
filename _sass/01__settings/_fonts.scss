@@ -1,0 +1,51 @@
+//
+//  Icon Font
+$icon: (
+    "Outlined": (
+        (
+            "name": "outlined-iconset",
+            "formats": ("eot", "woff", "ttf", "svg")
+        ),
+    )
+);
+//
+//  Monospaced Font
+$mono: (
+    "SourceCodePro": (
+        (
+            "name": "SourceCodePro-Regular",
+            "formats": ("woff"),
+            "weight": "400"
+        ),
+    )
+);
+//
+//  Serif Font
+$serif: (
+    "Tisa": (
+        (
+            "name": "TisaWeb",
+            "formats": ("woff"),
+            "weight": "400"
+        ), (
+            "name": "TisaWeb-Bold",
+            "formats": ("woff"),
+            "weight": "700"
+        ),
+    )
+);
+//
+//  Sans Font
+$sans: (
+    "Mark": (
+        (
+            "name": "MarkWeb",
+            "formats": ("woff"),
+            "weight": "400"
+        ), (
+            "name": "MarkWeb-Bold",
+            "formats": ("woff"),
+            "weight": "700"
+        ),
+    )
+);

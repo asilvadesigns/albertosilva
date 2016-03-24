@@ -1,0 +1,85 @@
+//
+//  Var
+$nav__y: $global__y;
+$nav__x: $global__x;
+//
+//  Base
+.nav {
+    @include clearfix;
+}
+
+.nav__group {
+    @include clearfix;
+    position: relative;
+}
+
+.nav__group--nav {
+    top: rhythm(2);
+}
+
+@media (min-width: 50em) {
+    .nav__group--nav {
+        top: 0;
+    }
+}
+
+.nav__item {
+    position: relative;
+
+    display: block;
+}
+
+.nav__icon {
+    position: absolute;
+    top: negative($nav__y * 3);
+    left: $nav__x;
+
+    .icon {
+        font-size: $h4__font-size;
+    }
+}
+
+.nav--navbar {
+    .nav__group {
+        margin: 0 negative($nav__x);
+    }
+
+    .nav__item {
+        float: left;
+
+        padding: $nav__y $nav__x;
+    }
+
+    .nav__text {
+        color: $neutral__color;
+    }
+
+    .active .nav__text {
+        color: $primary__color;
+    }
+}
+
+//
+//  Base
+.me {
+    position: relative;
+
+    padding-bottom: rhythm(1);
+
+    color: $neutral__color;
+}
+
+.me__name {
+    text-transform: capitalize;
+}
+
+.me__title {
+    @include small-caps;
+
+    font-size: $h6__font-size;
+    line-height: 1;
+
+    position: absolute;
+
+    width: 15em;
+}

@@ -1,0 +1,30 @@
+<header class="header">
+    <nav class="nav nav--navbar">
+        <div class="container">
+            <div class="row">
+                <div class="col col--4">
+                    <div class="nav__group">
+                        <a class="nav__item me" href="{{ site.baseurl }}/">
+                            <div class="nav__icon">
+                                <div class="logo" href="{{ site.baseurl }}/">
+                                    <object class="logo__svg" data="{{ '/images/logo.svg' | prepend: site.baseurl }}" type="image/svg+xml">
+                                        <img class="logo__svg" src="{{ '/images/logo.svg' | prepend: site.baseurl }}" alt="">
+                                    </object>
+                                </div>
+                            </div>
+                            <h5 class="me__name">{{ site.author }}</h5>
+                            <span class="me__title">{{ site.title }}</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col col--2">
+                    <div class="nav__group nav__group--nav">
+                        {% assign pagelist = site.pages | sort: 'navorder' %}
+                        {% assign navgroup = 'main' %}
+                        {% include nav--header.html %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>

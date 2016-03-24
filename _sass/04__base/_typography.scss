@@ -1,0 +1,185 @@
+//
+//  Var
+$body__color: $neutral__color;
+$link__color: $primary__color;
+//
+//  Headings
+$h5__font-size: $global__unit;
+$h6__font-size: $h5__font-size / $global__font-ratio;
+$h4__font-size: $h5__font-size * $global__font-ratio;
+$h3__font-size: $h4__font-size * $global__font-ratio;
+$h2__font-size: $h3__font-size * $global__font-ratio;
+$h1__font-size: $h2__font-size * $global__font-ratio;
+//
+//  Fonts
+@include ff-batch($icon);
+@include ff-batch($sans);
+@include ff-batch($serif);
+@include ff-batch($mono);
+//
+//  Base
+html {
+    font-size: ($global__font-size / 16) * 100%;
+}
+
+body {
+    font-family: "Mark", serif;
+    line-height: $global__line-height;
+
+    color: $body__color;
+
+    font-feature-settings: "kern" 1, "liga" 1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+}
+
+h1,
+.h1 {
+    font-size: $h1__font-size;
+}
+
+h2,
+.h2 {
+    font-size: $h2__font-size;
+}
+
+h3,
+.h3 {
+    font-size: $h3__font-size;
+}
+
+h4,
+.h4 {
+    font-size: $h4__font-size;
+}
+
+h5,
+.h5 {
+    font-size: $h5__font-size;
+}
+
+h6,
+.h6,
+small {
+    font-size: $h6__font-size;
+}
+
+p,
+ul,
+ol {
+    margin-bottom: rhythm(1);
+}
+
+a {
+    text-decoration: none;
+
+    color: $link__color;
+
+    transition: opacity 0.25s ease-in-out;
+
+    &:hover {
+        opacity: 0.5;
+    }
+}
+
+strong,
+em {
+    font-weight: 700;
+}
+
+//
+//  Content
+.content {
+    //
+}
+
+.content__header {
+    //
+}
+
+.content__body {
+    //
+}
+
+.main .content__body {
+    font-family: "Tisa", serif;
+    font-size: 112.5%;
+
+    a {
+        text-decoration: underline;
+        color: inherit;
+    }
+}
+
+.footer .content {
+    font-size: 90%;
+}
+
+//
+//  Sidebar
+.sidebar {
+    //
+}
+
+.sidebar__body {
+    //
+}
+
+.sidebar__footer {
+    margin-top: $global__y;
+}
+
+.main .sidebar__header {
+    font-family: "Tisa", serif;
+}
+
+.main .sidebar__body {
+    font-size: 90%;
+}
+
+.footer .sidebar {
+    font-size: 90%;
+}
+
+//
+//  Heading
+.heading {
+    //
+}
+
+.heading--subtitle {
+    @include small-caps;
+    font-family: "Mark", sans-serif;
+    font-weight: normal;
+    text-transform: lowercase;
+    margin-bottom: ($global__y * 4);
+}
+
+//
+//  Post
+.post {
+    margin-bottom: ($global__y * 4);
+}
+
+.post__title {
+    line-height: 1;
+}
+
+.post__time {
+    @include small-caps;
+    font-family: "Mark", sans-serif;
+    text-transform: lowercase;
+}
+
+.inprogress {
+    background-color: $primary__color;
+    color: $white;
+    padding: rhythm(0.5) 0;
+}

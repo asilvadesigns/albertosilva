@@ -1,0 +1,39 @@
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col col--4">
+                <div class="content">
+                    <header class="content__header">
+                        <h5>Colophon</h5>
+                    </header>
+                    <section class="content__body">
+                        <p>This website and its contents are &copy; 2016 under the terms of the MIT License. Typeset in <span class="small-caps">ff</span> Tisa, <span class="small-caps">ff</span> Mark and Source Code Pro. Built with Gulp, Jekyll, and Sass. Hosted by Github. Designed &amp; developed by yours truly. View code here.</p>
+                    </section>
+                </div>
+            </div>
+            <div class="col col--2">
+                <div class="sidebar">
+                    <header class="sidebar__header">
+                        <a class="nav__item me" href="{{ site.baseurl }}/">
+                            <h5 class="me__name">{{ site.author }}</h5>
+                            <span class="me__title">{{ site.title }}</span>
+                        </a>
+                    </header>
+                    <section class="sidebar__body">
+                        {% assign pagelist = site.pages | sort: 'navorder' %}
+                        {% assign navgroup = 'main' %}
+                        {% include nav--footer.html %}
+                    </section>
+                    <footer class="sidebar__footer">
+                        <a class="nav__item" href="{{ site.email | prepend: 'tel:' }}">{{ site.email }}</a>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<div class="inprogress">
+    <div class="container">
+        <strong>Note:</strong> this site is in progress as of 3-24-16.
+    </div>
+</div>

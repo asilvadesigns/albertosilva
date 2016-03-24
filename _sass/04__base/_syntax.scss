@@ -1,0 +1,89 @@
+//
+//  Var
+$highlight__radius:  $global__radius;
+$highlight__x:       $global__x;
+$highlight__y:       rhythm($global__y);
+//
+//  Syntax highlighting styles
+.highlight {
+    font-family: 'SourceCodePro', monospace;
+    font-weight: 400;
+
+    margin-top: $highlight__y;
+    margin-bottom: $highlight__y;
+    padding: $highlight__x;
+
+    color: $s-foreground;
+    border-radius: $highlight__radius;
+    background-color: $s-background;
+}
+
+.language-html {
+    //  Element
+    .nc,
+    .nt {
+        color: $s-red;
+    }
+
+    //  Attribute
+    .na {
+        color: $s-orange;
+    }
+
+    //  Class
+    .s {
+        color: $s-green;
+    }
+}
+
+.language-scss {
+    //  Selector
+    .nc,
+    .nt {
+        color: $s-red;
+    }
+
+    //  String, Property, Mixin Name
+    .p,
+    .nd,
+    .nl {
+        color: $s-light-blue;
+    }
+
+    //  Attribute Selector
+    .o + .nt,
+    .s2 {
+        color: $s-green;
+    }
+
+    //  Colon following Property
+    .nl + .p {
+        color: $s-foreground;
+    }
+
+    //  Value
+    .nb,
+    .no,
+    .m,
+    .mi {
+        color: $s-orange;
+    }
+
+    //  Function & Mixin
+    .k,
+    .nf {
+        color: $s-purple;
+    }
+
+    //  Function Parenthesis
+    .nf + .p,
+    .nf + .p + .m + .p,
+    .nf + .p + .mi + .p {
+        color: $s-purple;
+    }
+
+    //  Function Parameter
+    .nf + .p + .m {
+        color: $s-orange;
+    }
+}
