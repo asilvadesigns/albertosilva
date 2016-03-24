@@ -1,0 +1,24 @@
+//
+//  Var
+$project__x:  $global__x;
+$project__y:  $global__y;
+//
+//  Base
+.project {
+    margin-bottom: ($project__y * 8);
+}
+
+.project__gallery {
+    @include clearfix;
+}
+
+.project__gallery-item {
+    font-size: 0;
+    float: left;
+    width: percentage(1 / 3);
+}
+
+.project__gallery-feature {
+    width: 100%;
+}
+

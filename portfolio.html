@@ -11,18 +11,19 @@ navorder:   4
 <h5 class="heading heading--subtitle">collection of recent works</h5>
 
 {% for project in projects %}
-<div class="row">
+<div class="row project">
     <div class="col col--4">
-        <div class="gallery">
-            <ul>
-                {% for image in project.images %}
-                <li>
-                    <a href="{{ project_path }}{{ image.image }}">
-                        <img class="b-lazy" src="{{ project_path }}{{ image.image }}" data-src="{{ project_path }}{{ image.image }}" alt="{{ page.title }}">
-                    </a>
-                </li>
-                {% endfor %}
-            </ul>
+        <div class="js-gallery project__gallery">
+            {% if project.feature %}
+            <a class="project__gallery-item project__gallery-feature" href="{{ project_path }}{{ project.feature }}">
+                <img class="b-lazy" src="{{ project_path }}{{ project.feature }}" data-src="{{ project_path }}{{ project.feature }}" alt="{{ page.title }}">
+            </a>
+            {% endif %}
+            {% for image in project.images %}
+            <a class="project__gallery-item" href="{{ project_path }}{{ image.image }}">
+                <img class="b-lazy" src="{{ project_path }}{{ image.image }}" data-src="{{ project_path }}{{ image.image }}" alt="{{ page.title }}">
+            </a>
+            {% endfor %}
         </div>
     </div>
     <div class="col col--2">

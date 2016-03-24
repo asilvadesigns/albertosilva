@@ -1,0 +1,16 @@
+//
+//  Post
+.post {
+    margin-bottom: ($global__y * 4);
+}
+
+.post__title {
+    line-height: 1;
+}
+
+.post__time {
+    @include small-caps;
+    font-family: "Mark", sans-serif;
+    text-transform: lowercase;
+}
+

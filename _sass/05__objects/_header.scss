@@ -7,4 +7,8 @@ $header__x:  $global__x;
 .header {
     margin-top: ($header__y * 4);
     margin-bottom: ($header__y * 8);
+
+    @media (min-width: 50em) {
+        margin-top: ($header__y * 6);
+    }
 }

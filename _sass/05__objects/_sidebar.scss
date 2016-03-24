@@ -1,0 +1,55 @@
+//
+//  Var
+$sidebar__x: $global__x;
+$sidebar__y: $global__y;
+//
+//  Base
+.content {
+    //
+}
+
+.content__header {
+    //
+}
+
+.content__body {
+    //
+}
+
+.main .content__body {
+    font-family: "Tisa", serif;
+    font-size: 112.5%;
+
+    a {
+        text-decoration: underline;
+        color: inherit;
+    }
+}
+
+.footer .content {
+    font-size: 90%;
+}
+
+.sidebar {
+    //
+}
+
+.sidebar__body {
+    //
+}
+
+.sidebar__footer {
+    margin-top: $sidebar__y;
+}
+
+.main .sidebar__header {
+    font-family: "Tisa", serif;
+}
+
+.main .sidebar__body {
+    font-size: 90%;
+}
+
+.footer .sidebar {
+    font-size: 90%;
+}

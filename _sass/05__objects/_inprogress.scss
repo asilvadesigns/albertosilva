@@ -1,0 +1,12 @@
+//
+//  Var
+$inprogress__x: $global__x;
+$inprogress__y: $global__y;
+//
+//  Base
+.inprogress {
+    background-color: $primary__color;
+    color: $white;
+    padding: $inprogress__y 0;
+}
+
