@@ -1,0 +1,11 @@
+<script src="{{ '/js/baguetteBox.js' | prepend: site.baseurl }}"></script>
+<script src="{{ '/js/blazy.min.js' | prepend: site.baseurl }}"></script>
+<script>
+    window.onload = function() {
+        ;(function() {
+            baguetteBox.run('.gallery');
+            var bLazy = new Blazy();
+        })();
+    };
+</script>
+

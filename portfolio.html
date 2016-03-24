@@ -8,16 +8,22 @@ navorder:   4
 {% capture project_path %}{{ site.baseurl }}{{ site.projectimagepath }}{% endcapture %}
 {% assign projects = site.portfolio | sort: listing-priority %}
 
+<h5 class="heading heading--subtitle">collection of recent works</h5>
+
 {% for project in projects %}
 <div class="row">
     <div class="col col--4">
-        <ul>
-            {% for image in project.images %}
-            <li>
-                <img src="{{ project_path }}{{ image.image }}" alt="{{ page.title }}">
-            </li>
-            {% endfor %}
-        </ul>
+        <div class="gallery">
+            <ul>
+                {% for image in project.images %}
+                <li>
+                    <a href="{{ project_path }}{{ image.image }}">
+                        <img class="b-lazy" src="{{ project_path }}{{ image.image }}" data-src="{{ project_path }}{{ image.image }}" alt="{{ page.title }}">
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
     </div>
     <div class="col col--2">
         <div class="sidebar">

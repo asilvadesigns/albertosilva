@@ -1,0 +1,12 @@
+.b-lazy {
+    max-width: 100%;
+
+    transition: opacity 500ms ease-in-out;
+
+    opacity: 0;
+}
+
+.b-lazy.b-loaded {
+    opacity: 1;
+}
+
