@@ -53,9 +53,9 @@ gulp.task('sass', function() {
             browsers:  ['last 2 versions'],
             cascade:   false
         }))
-        //  .pipe(cssnano({
-        //      discardComments: { removeAll: true }
-        //  }))
+        .pipe(cssnano({
+            discardComments: { removeAll: true }
+        }))
         .pipe(gulp.dest('./_includes'))
         .pipe(browserSync.reload({
             stream: true
