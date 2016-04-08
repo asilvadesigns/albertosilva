@@ -10,9 +10,9 @@ navorder:   4
 
 <h5 class="heading heading--subtitle">collection of recent works</h5>
 
-{% for project in projects %}
+{% for project in projects reversed %}
 <div class="row project">
-    <div class="col col--4">
+    <div class="col col--4 col--offset--1">
         <div class="js-gallery project__gallery">
             {% if project.feature %}
             <a class="project__gallery-item project__gallery-feature" href="{{ project_path }}{{ project.feature }}">
@@ -29,31 +29,39 @@ navorder:   4
     <div class="col col--2">
         <div class="sidebar">
             <header class="sidebar__header">
-                <h4 style="text-transform: capitalize">{{ project.title }}</h4>
+                <h4 class="project__title">{{ project.title }}</h4>
             </header>
             <section class="sidebar__body">
-                <h5>Brief</h5>
-                <p>{{ project.summary }}</p>
-                <h5>Client</h5>
-                <p>{{ project.client }}</p>
-                <h5>Products</h5>
+                <h5 class="project__subtitle">Summary</h5>
+                <p class="project__summary">
+                    {{ project.summary }}
+                    {% if project.link %}<br><a class="project__link btn" href="{{ project.link }}" target="_blank">View Site</a>{% endif %}
+                </p>
+
+                <h5 class="project__subtitle">Client</h5>
+                <p class="project__client">{{ project.client }}</p>
+
+                <h5 class="project__subtitle">Products</h5>
                 <ul class="list--inline">
                     {% for product in project.products %}
-                    <li>{{ product.product | capitalize }}</li>
+                    <li class="project__product">{{ product.product }}</li>
                     {% endfor %}
                 </ul>
-                <h5>Roles</h5>
+
+                <h5 class="project__subtitle">Roles</h5>
                 <ul class="list--inline">
                     {% for role in project.roles %}
-                    <li>{{ role.role | capitalize }}</li>
+                    <li class="project__role">{{ role.role }}</li>
                     {% endfor %}
                 </ul>
-                <h5>Tools</h5>
+
+                <h5 class="project__subtitle">Tools</h5>
                 <ul class="list--inline">
                     {% for tool in project.tools %}
-                    <li>{{ tool.tool | capitalize }}</li>
+                    <li class="project__tool">{{ tool.tool }}</li>
                     {% endfor %}
                 </ul>
+
             </section>
         </div>
     </div>

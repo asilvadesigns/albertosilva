@@ -22,3 +22,12 @@ $project__y:  $global__y;
     width: 100%;
 }
 
+.project__title,
+.project__subtitle,
+.project__link,
+.project__client,
+.project__product,
+.project__role,
+.project__tool {
+    text-transform: capitalize;
+}

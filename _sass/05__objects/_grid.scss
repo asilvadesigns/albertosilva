@@ -4,6 +4,11 @@ $grid__x:  $global__x;
 $grid__y:  $global__y;
 //
 //  Base
+.container,
+.col {
+    box-sizing: border-box;
+}
+
 .container {
     margin: 0 auto;
     padding: 0 $grid__x;
@@ -16,6 +21,11 @@ $grid__y:  $global__y;
 
 .row {
     @include clearfix;
+    margin: 0 negative($grid__x);
+}
+
+.col {
+    padding: 0 $grid__x;
 }
 
 .col--1 {
@@ -35,8 +45,16 @@ $grid__y:  $global__y;
         width: percentage(2 / 6);
     }
 
-    .col--4 {
+    .col--3 {
         width: percentage(3 / 6);
-        padding-right: percentage(1 / 6);
     }
+
+    .col--4 {
+        width: percentage(3.75 / 6);
+        padding-right: percentage(0.25 / 6);
+    }
+
+    //  .col--offset--1 {
+    //      padding-right: percentage(1 / 6);
+    //  }
 }
