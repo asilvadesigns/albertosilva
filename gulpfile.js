@@ -14,6 +14,9 @@ var gulp         = require('gulp'),
     sass         = require('gulp-sass'),
     sassdoc      = require('sassdoc');
 
+var jekyll = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
+
+
 //
 //  Messages
 var messages     = {
@@ -24,7 +27,7 @@ var messages     = {
 //  Jekyll Build
 gulp.task('jekyll-build', function(done) {
     browserSync.notify(messages.jekyllBuild);
-    return childProcess.spawn('jekyll.bat', ['build'], {stdio: 'inherit'})
+    return childProcess.spawn(jekyll, ['build'], {stdio: 'inherit'})
         .on('close', done);
 });
 
